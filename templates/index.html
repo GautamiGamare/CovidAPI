@@ -1,0 +1,18 @@
+{% extends 'common.html' %}
+{% load static %}
+{% block Gautami %}
+<table align="center" border="1" >
+{% for i in data %}
+<tr >
+<td style="padding: 5px;font-size: 20px;">
+    <a href="{% url 'state_info' %}?state={{ i }}  ">
+    {{ i }}
+    </a>
+</tr>
+</td>
+{% endfor %}
+</table>
+
+
+
+{% endblock %}

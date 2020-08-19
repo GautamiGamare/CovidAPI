@@ -1,0 +1,28 @@
+{% extends 'common.html' %}
+{% block Gautami %}
+{% load static %}
+<table align="center" style="padding: 5px; font-size: 20px;" class="table">
+<tr style="font-size: 25px; text-align: center;color: indigo">
+    <th colspan="5">{{ state }} --- State Code{{ data.statecode }} </th>
+</tr>
+<tr class="thead-dark">
+    <th>States</th>
+    <th>Active</th>
+    <th>Confirmed</th>
+    <th>Deceased</th>
+    <th>Recovered</th>
+    <th>Total</th>
+</tr>
+{% for x,y in data.districtData.items %}
+    <tr><th>{{ x }}</th>
+    <th>{{ y.active }}</th>
+    <th>{{ y.confirmed }}</th>
+    <th>{{ y.deceased }}</th>
+    <th>{{ y.recovered }}</th>
+    <th></th>
+    </tr>
+{% endfor %}
+<tr>
+</tr>
+</table>
+{% endblock %}
